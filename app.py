@@ -13,23 +13,8 @@ from sklearn.naive_bayes import MultinomialNB
 
 
 
+st.title("Spam & Ham Classifier App\U0001F60A")
 
-def resize_image(image_path, new_width, new_height):
-    image = Image.open(image_path)
-    resized_image = image.resize((new_width, new_height))
-    return resized_image
-
-# Example usage:
-resized_header_image = resize_image("spam-classifier.png", 300, 50)
-
-# ------------------------------------
-
-def main():
-    st.title("My Streamlit App")
-    st.image("spam-classifier.png", use_column_width=True)
-
-if __name__ == "__main__":
-    main()
 
 
 ## sample datasets
@@ -39,13 +24,13 @@ df.rename(columns={"v1": "label", "v2": "message"}, inplace=True)
 
 ## show sample messages
 sample_message = df.sample()
+st.markdown("<span stype='font-size=25;'><b><i>Copy the messsage and test the model!<i></b></span>", unsafe_allow_html=True)
 for lable in sample_message['label']:
     st.text(f"Message Type - {lable}")
 
 
 for message in sample_message['message']:
-    st.title("Copyt the below messages and use it to check the model prediction!")
-    st.markdown(f'<span style="font-size: 20px;">{message}</span>', unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size: 15px;'>{message}</span>", unsafe_allow_html=True)
 
 
 ## model the model file
@@ -79,3 +64,4 @@ if st.button('Predict'):
         st.write("This is Ham Message !")
     else:
         st.write("This is Spam message")
+
