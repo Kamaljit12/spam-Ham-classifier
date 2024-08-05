@@ -45,7 +45,7 @@ for lable in sample_message['label']:
 
 for message in sample_message['message']:
     st.title("Copyt the below messages and use it to check the model prediction!")
-    st.text(message)
+    st.markdown(f'<span style="font-size: 20px;">{message}</span>', unsafe_allow_html=True)
 
 
 ## model the model file
