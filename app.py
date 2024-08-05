@@ -3,6 +3,16 @@ import pandas as pd
 import re
 import pickle
 from PIL import Image
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+
+
+
 
 def resize_image(image_path, new_width, new_height):
     image = Image.open(image_path)
