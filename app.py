@@ -44,7 +44,8 @@ for lable in sample_message['label']:
 
 
 for message in sample_message['message']:
-    st.text(f"--------Copy and check the model with this message--------\n{message}")
+    st.title("Copyt the below messages and use it to check the model prediction!")
+    st.text(message)
 
 
 ## model the model file
