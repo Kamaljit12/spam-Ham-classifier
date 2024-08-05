@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 nltk
-pickle
+pickledb
 scikit-learn
