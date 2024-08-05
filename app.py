@@ -1,13 +1,8 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import nltk
 import re
 import pickle
-from nltk.corpus import stopwords
-from nltk.stem.porter import PorterStemmer
-from sklearn.preprocessing import LabelEncoder
-
+from PIL import Image
 
 from PIL import Image
 
